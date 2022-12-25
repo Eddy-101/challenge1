@@ -3,6 +3,7 @@ let buttonEncrypt = document.getElementById('b-encrypt')
 let buttonDesEncrypt = document.getElementById('b-desencrypt')
 let textContainer = document.getElementById('text-container')
 let notContent = document.getElementById('not-content')
+let textContent = document.getElementById('text-content')
 
 buttonEncrypt.addEventListener('click', encriptar)
 buttonDesEncrypt.addEventListener('click', desencriptar)
@@ -12,7 +13,7 @@ const encryptLetters = {
     e: "enter",
     i: "imes",
     o: "ober",
-    u: "ufat"
+    u: "ufat",
 }
 
 const desencryptLetters = {
@@ -34,6 +35,7 @@ function encriptar() {
     )
     textContainer.textContent = array.join('')
     notContent.style.display = 'none'
+    textContent.style.display = 'flex'
 }
 
 function desencriptar() {
@@ -42,5 +44,6 @@ function desencriptar() {
     const newValue = value.replaceAll('ai', 'a').replaceAll('enter', 'e').replaceAll('imes', 'i').replaceAll('ober', 'o').replaceAll('ufat', 'u')
     textContainer.textContent = newValue
     notContent.style.display = 'none'
+    textContent.style.display = 'flex'
 }
 
