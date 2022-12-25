@@ -92,3 +92,7 @@ body {
 .description {
     text-align: center;
 }
+
+.text-container {
+    font-size: 24px;
+}
