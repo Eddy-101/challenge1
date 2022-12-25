@@ -16,8 +16,10 @@
         </span>
     </header>
     <main class="main">
+
+        <!--Eventos de la encriptacion-->
         <section class="encriptacion">
-            <input class="box" type="text" placeholder="Ingrese el texto aqui">
+            <textarea name="text" id="text" class="box" placeholder="Ingrese el texto aqui"></textarea>
             <div>
                 <div class="alerta">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,11 +28,13 @@
                     <span>Solo letras minúsculas y sin acentos</span>
                 </div>
                 <div class="buttons">
-                    <button class="button">Encriptar</button>
-                    <button class="button blue">Desencriptar</button>
+                    <button id="b-encrypt" class="button">Encriptar</button>
+                    <button id="b-desencrypt" class="button blue">Desencriptar</button>
                 </div>
             </div>
         </section>
+
+        <!--Resultado de la encriptacion-->
         <aside class="result">
             <div class="image">
                 <svg width="336" height="304" viewBox="0 0 336 304" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -176,6 +180,9 @@
             <h2 class="subtitle">Ningún mensaje fue encontrado</h2>
             <p class="description">Ingresa el texto que desees encriptar o desencriptar.</p>
         </aside>
+
     </main>
+
+    <script src="./js/encriptar.js"></script>
 </body>
 </html>
