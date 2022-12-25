@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    padding-left: 16px;
+    padding-top: 24px;
+}
+
+.main {
+    padding: 0px 16px;
+}
+
+.box {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 32px;
+    color: #0A3871;
+}
+
+.box::placeholder {
+    font-size: 32px;
+    color:#0A3871;
+}
+
+.image {
+    display: none;
+}
+
+.encriptacion {
+    margin-bottom: ;
+}
+
+.alerta {
+    margin-bottom: 16px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.button {
+    background: transparent;
+    border-radius: 24px;
+    border-color: #0A3871;
+    color: #0A3871;
+    padding: 24px 0px;
+    width: 100%;
+}
+
+.button.blue {
+    background-color: #0A3871;
+    color: white;
+}
