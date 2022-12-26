@@ -4,6 +4,7 @@ let buttonDesEncrypt = document.getElementById('b-desencrypt')
 let textContainer = document.getElementById('text-container')
 let notContent = document.getElementById('not-content')
 let textContent = document.getElementById('text-content')
+let buttonCopy = document.getElementById('copy')
 
 const encryptLetters = {
     a: "ai",
@@ -15,6 +16,8 @@ const encryptLetters = {
 
 buttonEncrypt.addEventListener('click', encriptar)
 buttonDesEncrypt.addEventListener('click', desencriptar)
+buttonCopy.addEventListener('click', copy)
+text.addEventListener('keyup', reset)
 
 
 function encriptar() {
@@ -42,5 +45,17 @@ function desencriptar() {
     textContainer.textContent = newValue
     notContent.style.display = 'none'
     textContent.style.display = 'flex'
+}
+
+function reset(e) {
+    if (e.target.value != "") return
+    notContent.style.display = 'block'
+    textContent.style.display = 'none'
+}
+
+function copy() {
+    navigator.clipboard.writeText(textContainer.textContent)
+        .then(() => alert("texto copiado!!"))
+        .catch(() => alert("ocurrio un error!!"))
 }
 

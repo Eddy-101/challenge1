@@ -68,6 +68,7 @@ body {
     font-size: 32px;
     color: #0A3871;
     background: transparent;
+    resize: none;
 }
 
 .box::placeholder {
