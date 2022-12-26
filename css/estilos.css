@@ -178,4 +178,5 @@ body {
     font-size: 24px;
     margin-bottom: 32px;
     display: inline-block;
+    word-break: break-all;
 }
